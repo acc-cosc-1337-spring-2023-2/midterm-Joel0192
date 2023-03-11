@@ -11,11 +11,16 @@ int main()
     {
         cout<<"Enter a sales range(or to exit, enter -1): ";
         cin>>integer;
-        if(integer >= 0)
+        if(integer == -1)
+        {
+            break;
+        }
+        else if(integer >= 0)
         {
             result = get_sales_commission(integer);
             cout<<"Sales of "<<integer<<" yields a commission of "<<result<<"\n\n";
         }
+        
         
     } while (integer != -1);
     
